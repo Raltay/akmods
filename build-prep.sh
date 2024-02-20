@@ -87,7 +87,7 @@ elif [[ "tuxedo" == "${KERNEL_FLAVOR}" ]]; then
     wget https://copr.fedorainfracloud.org/coprs/kallepm/tuxedo-drivers/repo/fedora-${RELEASE}/kallepm-tuxedo-drivers-fedora-${RELEASE}.repo -O /etc/yum.repos.d/_copr_kallepm-tuxedo-drivers.repo
     rpm-ostree cliwrap install-to-root /
     rpm-ostree override replace \
-        --install tuxedo-drivers
+        tuxedo-drivers
 else
     echo "Default main kernel needs no customization."
 fi
